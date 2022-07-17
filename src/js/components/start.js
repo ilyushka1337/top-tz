@@ -7,7 +7,7 @@ function start(){
 		setTimeout(() => {
 			overlay.classList.add('overlay--hidden')
 			slider.classList.add('start-anim')
-		}, 0)
+		}, 5000)
 	})
 }
 start()
