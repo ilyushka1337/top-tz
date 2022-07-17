@@ -41,11 +41,9 @@ html(lang="ru")
 				)
 			.slider-pagination.main-slider__pagination
 			.slider-nav.slider-nav--prev.main-slider__nav.main-slider__nav--prev
-				svg.slider-nav__arrow.slider-nav__arrow--prev
-					use(href='./img/chevron-right.svg')
+				+chevron-right()(class="slider-nav__arrow slider-nav__arrow--prev")
 			.slider-nav.slider-nav--next.main-slider__nav.main-slider__nav--next
-				svg.slider-nav__arrow.slider-nav__arrow--next
-					use(href='./img/chevron-right.svg')
+				+chevron-right()(class="slider-nav__arrow slider-nav__arrow--next")
 			.main-slider__previews.container
 				+slidePreview('slider_1pre.jpg', 'Акция действует с 01.07.18', 'Этот текст добавлен для демонстрации на странице', '0')
 				+slidePreview('slider_2pre.jpg', 'Акция действует с 01.07.18', 'Этот текст добавлен для демонстрации на странице', '1')
