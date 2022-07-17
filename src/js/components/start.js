@@ -8,6 +8,6 @@ function start(){
 			overlay.classList.add('overlay--hidden')
 			slider.classList.add('start-anim')
 		}, 5000)
-	})
+	}, { once: true })
 }
 start()

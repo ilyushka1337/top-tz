@@ -13,7 +13,7 @@
 	transition-property: opacity, transform, visibility;
 	&__btn{
 		transition-duration: .4s;
-		transition-property: transform;
+		transition-property: transform, background-color;
 	}
 	&--hidden{
 		opacity: 0;
