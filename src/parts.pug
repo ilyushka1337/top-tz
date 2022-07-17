@@ -1,0 +1,24 @@
+mixin slide(title, subtitle, desc, img, mobImg)
+	.swiper-slide.main-slider__slide
+		picture.bg.main-slider__bg
+			source(srcset=`./img/${img}?as=webp` type="image/webp" media="(min-width: 768px)")
+			source(srcset=`./img/${img}` type="image/jpeg" media="(min-width: 768px)")
+			source(srcset=`./img/${mobImg}?as=webp` type="image/webp")
+			img.bg__img.main-slider__bg-img(src="./img/slider_1min.jpg")
+		.container
+			.main-slider__content
+				h1.main-slider__title= title
+				p.main-slider__subtitle= subtitle
+				p.main-slider__desc= desc
+				.main-slider__btns
+					a.btn.btn--main.main-slider__btn(href="") Подробнее
+					a.btn.btn--transparent.main-slider__btn.main-slider__actions-btn(href="") Все акции
+
+mixin slidePreview(img, desc, title, index)
+	.slider-preview(data-index=`${index}`)
+		picture.slider-preview__pic
+			source(srcset=`./img/${img}?as=webp` type="image/webp")
+			img.slider-preview__img(src=`./img/${img}`)
+		.slider-preview__content
+			p.slider-preview__desc= desc
+			p.slider-preview__title= title

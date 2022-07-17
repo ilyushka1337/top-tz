@@ -1,0 +1,58 @@
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="./scss/style.scss")
+		script(src="./js/script.js" defer type="module") 
+		title Document
+
+		include ./parts
+	body
+		.swiper.main-slider#slider
+			.swiper-wrapper
+				+slide(
+					'Этот текст добавлен для демонстрации на странице',
+					'Тест на внимательность',
+					'Акция действует с 01.07.18 по 31.07.18',
+					'slider_1.jpg',
+					'slider_1min.jpg'
+				)
+				+slide(
+					'Этот текст добавлен для демонстрации на странице',
+					'Тест на внимательность',
+					'Акция действует с 01.07.18 по 31.07.18',
+					'slider_2.jpg',
+					'slider_2min.jpg'
+				)
+				+slide(
+					'Этот текст добавлен для демонстрации на странице',
+					'Тест на внимательность',
+					'Акция действует с 01.07.18 по 31.07.18',
+					'slider_3.jpg',
+					'slider_3min.jpg'
+				)
+				+slide(
+					'Этот текст добавлен для демонстрации на странице',
+					'Тест на внимательность',
+					'Акция действует с 01.07.18 по 31.07.18',
+					'slider_4.jpg',
+					'slider_4min.jpg'
+				)
+			.slider-pagination.main-slider__pagination
+			.slider-nav.slider-nav--prev.main-slider__nav.main-slider__nav--prev
+				svg.slider-nav__arrow.slider-nav__arrow--prev
+					use(href='./img/chevron-right.svg')
+			.slider-nav.slider-nav--next.main-slider__nav.main-slider__nav--next
+				svg.slider-nav__arrow.slider-nav__arrow--next
+					use(href='./img/chevron-right.svg')
+			.main-slider__previews.container
+				+slidePreview('slider_1pre.jpg', 'Акция действует с 01.07.18', 'Этот текст добавлен для демонстрации на странице', '0')
+				+slidePreview('slider_2pre.jpg', 'Акция действует с 01.07.18', 'Этот текст добавлен для демонстрации на странице', '1')
+				+slidePreview('slider_3pre.jpg', 'Акция действует с 01.07.18', 'Этот текст добавлен для демонстрации на странице', '2')
+				+slidePreview('slider_4pre.jpg', 'Акция действует с 01.07.18', 'Этот текст добавлен для демонстрации на странице', '3')
+					.slider-preview__content
+						p.slider-preview__desc Акция действует с 01.07.18
+						p.slider-preview__title Этот текст добавлен для демонстрации на странице
+		.overlay#overlay
+			button.btn.btn--main.overlay__btn#start Начать демонстрацию

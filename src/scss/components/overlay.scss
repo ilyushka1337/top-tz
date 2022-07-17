@@ -1,0 +1,26 @@
+.overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	background: #c4cdd6;
+	transition-duration: .4s;
+	transition-property: opacity, transform, visibility;
+	&__btn{
+		transition-duration: .4s;
+		transition-property: transform;
+	}
+	&--hidden{
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		.overlay__btn{
+			transform: translateY(-100%);
+		}
+	}
+}
